@@ -9,7 +9,7 @@ import { ApiResponse } from '../../interfaces/api.response';
 export class RickAndMortyService {
   constructor(private http: HttpClient) {}
 
-  getCharacters(): Observable<ApiResponse> {
+  getCharacterList(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(
       'https://rickandmortyapi.com/api/character/?page=1'
     );
