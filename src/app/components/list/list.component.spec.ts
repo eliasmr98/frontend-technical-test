@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { EMPTY, Observable, of, throwError } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { ListComponent } from './list.component';
 import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
 import { ApiResponse } from '../../interfaces/api.response';

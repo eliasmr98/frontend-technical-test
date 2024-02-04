@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RickAndMortyService } from './rick.and.morty.service';
-import { HttpClient } from '@angular/common/http';
 import { of } from 'rxjs';
 
 describe('RickAndMortyService', () => {

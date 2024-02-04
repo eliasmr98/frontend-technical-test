@@ -13,8 +13,6 @@ describe('ErrorHandlerInterceptor', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
     });
-
-    httpClient = TestBed.inject(HttpClient);
   });
 
   it('should catch and handle HTTP errors', inject(
