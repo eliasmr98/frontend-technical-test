@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiResponse } from '../../interfaces/api.response';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ export class RickAndMortyService {
 
   getCharacterList(): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(
-      'https://rickandmortyapi.com/api/character/?page=1'
+      `${environment.apiUrlBase}character/?page=1`
     );
   }
 }
