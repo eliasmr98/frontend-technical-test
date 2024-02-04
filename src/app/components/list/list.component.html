@@ -1,1 +1,9 @@
-<p>list works!</p>
+@if(characterResults$ | async; as resultObject) {
+<ul class="character-list">
+  @for(item of resultObject.results; track item.id) {
+  <li>
+    <app-card [characterInfo]="item" />
+  </li>
+  }
+</ul>
+}
