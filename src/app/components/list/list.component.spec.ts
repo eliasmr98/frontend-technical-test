@@ -65,4 +65,50 @@ describe('ListComponent', () => {
 
     expect(component.characterResults$).toBeDefined();
   });
+
+  it('should increment currentPage and fetch characters on nextPage', () => {
+    const apiResponse: ApiResponse = {
+      info: {
+        count: 2,
+        pages: 2,
+        next: 'some_next_url',
+        prev: null,
+      },
+      results: [],
+    };
+    mockRickAndMortyService.getCharacterList.and.returnValue(of(apiResponse));
+
+    component.currentPage = 1;
+    fixture.detectChanges();
+
+    spyOn(component, 'fetchCharacters');
+
+    component.nextPage();
+
+    expect(component.currentPage).toBe(2);
+    expect(component.fetchCharacters).toHaveBeenCalled();
+  });
+
+  it('should decrement currentPage and fetch characters on prevPage', () => {
+    const apiResponse: ApiResponse = {
+      info: {
+        count: 2,
+        pages: 2,
+        next: null,
+        prev: 'some_prev_url',
+      },
+      results: [],
+    };
+    mockRickAndMortyService.getCharacterList.and.returnValue(of(apiResponse));
+
+    component.currentPage = 2;
+    fixture.detectChanges();
+
+    spyOn(component, 'fetchCharacters');
+
+    component.prevPage();
+
+    expect(component.currentPage).toBe(1);
+    expect(component.fetchCharacters).toHaveBeenCalled();
+  });
 });
