@@ -1,3 +1,4 @@
+<app-header></app-header>
 @if(characterResults$ | async; as resultObject) {
 <ul class="character-list">
   @for(item of resultObject.results; track item.id) {
