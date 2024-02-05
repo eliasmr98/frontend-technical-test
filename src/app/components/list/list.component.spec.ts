@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { ListComponent } from './list.component';
 import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
 import { ApiResponse } from '../../interfaces/api.response';
+import { ActivatedRoute } from '@angular/router';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -20,6 +21,10 @@ describe('ListComponent', () => {
       imports: [HttpClientModule],
       providers: [
         { provide: RickAndMortyService, useValue: mockRickAndMortyService },
+        {
+          provide: ActivatedRoute,
+          useValue: { snapshot: { data: {} } },
+        },
       ],
     });
 
@@ -52,20 +57,7 @@ describe('ListComponent', () => {
         next: null,
         prev: null,
       },
-      results: [
-        {
-          id: 1,
-          name: 'Rick Sanchez',
-          location: { name: 'Planet Earth', url: 'url.sample' },
-          status: 'alive',
-        },
-        {
-          id: 2,
-          name: 'Morty Smith',
-          location: { name: 'Planet Earth', url: 'url.sample' },
-          status: 'alive',
-        },
-      ],
+      results: [],
     };
     mockRickAndMortyService.getCharacterList.and.returnValue(of(apiResponse));
 
