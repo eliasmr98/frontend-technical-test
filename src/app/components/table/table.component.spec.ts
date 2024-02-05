@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
-import { ApiResponse } from '../../interfaces/api.response';
 import { ActivatedRoute } from '@angular/router';
 import { TableComponent } from './table.component';
 import { Character } from '../../interfaces/character';
