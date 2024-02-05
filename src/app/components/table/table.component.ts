@@ -21,7 +21,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.firstTenCharacters$ = this.service.getFirstTenCharacters().pipe(
-      catchError((error: string) => {
+      catchError((error: any) => {
         this.errorMessage = error;
         return EMPTY;
       })

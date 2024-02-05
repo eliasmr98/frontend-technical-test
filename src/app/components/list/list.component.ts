@@ -21,7 +21,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.characterResults$ = this.service.getCharacterList().pipe(
-      catchError((error: string) => {
+      catchError((error: any) => {
         this.errorMessage = error;
         return EMPTY;
       })
