@@ -11,9 +11,9 @@ import { Character } from '../../interfaces/character';
 export class RickAndMortyService {
   constructor(private http: HttpClient) {}
 
-  getCharacterList(): Observable<ApiResponse> {
+  getCharacterList(page: number = 1): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(
-      `${environment.apiUrlBase}character/?page=1`
+      `${environment.apiUrlBase}character/?page=${page}`
     );
   }
 

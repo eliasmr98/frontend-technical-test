@@ -1,7 +1,7 @@
 .character-list {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(14.4rem, 100%), 1fr));
   grid-gap: 2rem;
   padding-inline: 2.4rem;
 }

@@ -1,4 +1,7 @@
 <app-header></app-header>
+
+<app-pagination [currentPage]="currentPage" (next)="nextPage()" (prev)="prevPage()"></app-pagination>
+
 @if(characterResults$ | async; as resultObject) {
 <ul class="character-list">
   @for(item of resultObject.results; track item.id) {
