@@ -41,12 +41,14 @@ describe('RickAndMortyService', () => {
           name: 'Rick Sanchez',
           location: { name: 'Planet Earth', url: 'url.sample' },
           status: 'alive',
+          species: 'Human',
         },
         {
           id: 2,
           name: 'Morty Smith',
           location: { name: 'Planet Earth', url: 'url.sample' },
           status: 'alive',
+          species: 'Human',
         },
       ],
     };
@@ -66,12 +68,14 @@ describe('RickAndMortyService', () => {
         name: 'Rick Sanchez',
         location: { name: 'Planet Earth', url: 'url.sample' },
         status: 'alive',
+        species: 'Human',
       },
       {
         id: 2,
         name: 'Morty Smith',
         location: { name: 'Planet Earth', url: 'url.sample' },
         status: 'alive',
+        species: 'Human',
       },
     ];
     httpClientSpy.get.and.returnValue(of(mockApiResponse));

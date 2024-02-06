@@ -5,17 +5,18 @@
   <caption>Tabla de los primeros diez caracteres</caption>
   <thead>
     <tr>
-      <th>ID</th>
       <th>Name</th>
       <th>Status</th>
+      <th>Species</th>
     </tr>
   </thead>
   <tbody>
     @for(item of resultObject; track item.id) {
     <tr>
-      <td>{{ item.id }}</td>
       <td>{{ item.name }}</td>
       <td>{{ item.status }}</td>
+      <td>{{ item.species }}</td>
+      <td><button (click)="openEditForm(item)">Editar</button></td>
     </tr>
     }
   </tbody>
