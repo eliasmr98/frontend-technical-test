@@ -1,0 +1,21 @@
+h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.first-ten-characters-table {
+  width: 30%;
+  margin-block-start: 1rem;
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  th {
+    color: #42b4ca;
+    background-color: #f2f2f2;
+  }
+}

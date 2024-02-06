@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiResponse } from '../../interfaces/api.response';
 import { environment } from '../../../environments/environment.development';
+import { Character } from '../../interfaces/character';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +11,19 @@ import { environment } from '../../../environments/environment.development';
 export class RickAndMortyService {
   constructor(private http: HttpClient) {}
 
-  getCharacterList(): Observable<ApiResponse> {
+  getCharacterList(page: number = 1): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(
-      `${environment.apiUrlBase}character/?page=1`
+      `${environment.apiUrlBase}character/?page=${page}`
+    );
+  }
+
+  getFirstTenCharacters(): Observable<Character[]> {
+    const characterIds = Array.from(
+      { length: 10 },
+      (_, index) => index + 1
+    ).join(',');
+    return this.http.get<Character[]>(
+      `${environment.apiUrlBase}character/${characterIds}`
     );
   }
 }

@@ -1,0 +1,26 @@
+<app-header></app-header>
+@if(firstTenCharacters$ | async; as resultObject) {
+<h2>Mi Lista</h2>
+<table class="first-ten-characters-table">
+  <caption>Tabla de los primeros diez caracteres</caption>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(item of resultObject; track item.id) {
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.status }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
+@if(errorMessage) {
+<app-error-message [errorMessage]="errorMessage" />
+}
