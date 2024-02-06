@@ -1,0 +1,25 @@
+<div class="edit-character-dialog-container">
+  <div class="edit-character-title-container">
+    <h2>Editar Personaje</h2>
+  </div>
+  <div class="edit-character-form-container">
+    <form #editForm="ngForm">
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="updatedCharacter.name" required>
+      </div>
+      <div>
+        <label for="status">Estado:</label>
+        <input type="text" id="status" name="status" [(ngModel)]="updatedCharacter.status" required>
+      </div>
+      <div>
+        <label for="species">Especie:</label>
+        <input type="text" id="species" name="species" [(ngModel)]="updatedCharacter.species" required>
+      </div>
+      <div>
+        <button (click)="onSaveClick()">Guardar</button>
+        <button (click)="onCancelClick()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

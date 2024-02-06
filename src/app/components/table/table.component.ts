@@ -6,18 +6,26 @@ import { Character } from '../../interfaces/character';
 import { EMPTY, Observable, catchError } from 'rxjs';
 import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
 import { HeaderComponent } from '../header/header.component';
+import { MatDialog } from '@angular/material/dialog';
+import { EditCharacterComponent } from '../edit-character/edit-character.component';
 
 @Component({
   selector: 'app-table',
   standalone: true,
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss',
-  imports: [AsyncPipe, CardComponent, ErrorMessageComponent, HeaderComponent],
+  imports: [
+    AsyncPipe,
+    CardComponent,
+    ErrorMessageComponent,
+    HeaderComponent,
+    EditCharacterComponent,
+  ],
 })
 export class TableComponent implements OnInit {
   public firstTenCharacters$!: Observable<Character[]>;
   public errorMessage!: string;
-  constructor(private service: RickAndMortyService) {}
+  constructor(private service: RickAndMortyService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.firstTenCharacters$ = this.service.getFirstTenCharacters().pipe(
@@ -26,5 +34,19 @@ export class TableComponent implements OnInit {
         return EMPTY;
       })
     );
+  }
+
+  openEditForm(character: Character): void {
+    const dialogRef = this.dialog.open(EditCharacterComponent, {
+      width: '250px',
+      data: character,
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+      if (result) {
+        console.log('Updated character:', result);
+      }
+    });
   }
 }
