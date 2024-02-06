@@ -37,16 +37,9 @@ export class TableComponent implements OnInit {
   }
 
   openEditForm(character: Character): void {
-    const dialogRef = this.dialog.open(EditCharacterComponent, {
+    this.dialog.open(EditCharacterComponent, {
       width: '250px',
       data: character,
-    });
-
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-      if (result) {
-        console.log('Updated character:', result);
-      }
     });
   }
 }

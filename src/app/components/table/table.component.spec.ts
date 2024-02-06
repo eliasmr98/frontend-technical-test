@@ -1,30 +1,31 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
-import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
 import { ActivatedRoute } from '@angular/router';
-import { TableComponent } from './table.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Character } from '../../interfaces/character';
+import { RickAndMortyService } from '../../core/services/rick.and.morty.service';
+import { TableComponent } from './table.component';
 
 describe('TableComponent', () => {
   let component: TableComponent;
   let fixture: ComponentFixture<TableComponent>;
   let mockRickAndMortyService: jasmine.SpyObj<RickAndMortyService>;
+  let mockMatDialog: jasmine.SpyObj<MatDialog>;
 
   beforeEach(() => {
     mockRickAndMortyService = jasmine.createSpyObj('RickAndMortyService', [
       'getFirstTenCharacters',
     ]);
 
+    mockMatDialog = jasmine.createSpyObj('MatDialog', ['open']);
+
     TestBed.configureTestingModule({
-      declarations: [],
       imports: [HttpClientModule],
       providers: [
         { provide: RickAndMortyService, useValue: mockRickAndMortyService },
-        {
-          provide: ActivatedRoute,
-          useValue: { snapshot: { data: {} } },
-        },
+        { provide: MatDialog, useValue: mockMatDialog },
+        { provide: ActivatedRoute, useValue: { snapshot: { data: {} } } },
       ],
     });
 
@@ -58,5 +59,25 @@ describe('TableComponent', () => {
     fixture.detectChanges();
 
     expect(component.firstTenCharacters$).toBeDefined();
+  });
+
+  it('should open edit form dialog', () => {
+    const character: Character = {
+      id: 1,
+      name: 'Rick Sanchez',
+      status: 'Alive',
+      species: 'Human',
+      location: {
+        name: 'Planet Earth',
+        url: 'sample.url',
+      },
+    };
+
+    component.openEditForm(character);
+
+    expect(mockMatDialog.open).toHaveBeenCalledWith(jasmine.any(Function), {
+      width: '250px',
+      data: character,
+    });
   });
 });
