@@ -1,0 +1,6 @@
+{
+  "hosting": {
+    "public": "dist/frontend-technical-test/browser",
+    "ignore": ["firebase.json", "/.*", "/node_modules/"]
+  }
+}
