@@ -13,7 +13,7 @@ export class RickAndMortyService {
 
   getCharacterList(page: number = 1): Observable<ApiResponse> {
     return this.http.get<ApiResponse>(
-      `${environment.apiUrlBase}characterad/?page=${page}`
+      `${environment.apiUrlBase}character/?page=${page}`
     );
   }
 
