@@ -15,16 +15,3 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
   ],
 };
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyArESuLPf9M02AvGGn3ffDaAbKbIhPW8s4',
-  authDomain: 'frontend-technical-test-93a94.firebaseapp.com',
-  projectId: 'frontend-technical-test-93a94',
-  storageBucket: 'frontend-technical-test-93a94.appspot.com',
-  messagingSenderId: '440487141436',
-  appId: '1:440487141436:web:f9294dbbc739303220a339',
-  measurementId: 'G-S7CTMW43FL',
-};
-
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
