@@ -8,6 +8,7 @@ import { RickAndMortyService } from '../../core/services/rick.and.morty.service'
 import { HeaderComponent } from '../header/header.component';
 import { MatDialog } from '@angular/material/dialog';
 import { EditCharacterComponent } from '../edit-character/edit-character.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-table',
@@ -20,6 +21,7 @@ import { EditCharacterComponent } from '../edit-character/edit-character.compone
     ErrorMessageComponent,
     HeaderComponent,
     EditCharacterComponent,
+    FooterComponent,
   ],
 })
 export class TableComponent implements OnInit {
