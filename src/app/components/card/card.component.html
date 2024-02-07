@@ -1,5 +1,16 @@
 <div class="character-card">
-  <p>{{characterInfo.name}}</p>
-  <p>{{characterInfo.location.name}}</p>
-  <p>{{characterInfo.status}}</p>
+  <div class="card-image-container">
+    <img src="{{characterInfo.image}}" alt="Character image" width="180" height="180">
+  </div>
+  <div class="card-info-container">
+    <div class="card-name-container">
+      <p>{{characterInfo.name}}</p>
+    </div>
+    <div class="card-location-container">
+      <p>{{characterInfo.location.name}}</p>
+    </div>
+    <div class="card-status-container">
+      <p>{{characterInfo.status}}</p>
+    </div>
+  </div>
 </div>
