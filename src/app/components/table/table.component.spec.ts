@@ -71,6 +71,7 @@ describe('TableComponent', () => {
         name: 'Planet Earth',
         url: 'sample.url',
       },
+      image: 'url.sample',
     };
 
     component.openEditForm(character);

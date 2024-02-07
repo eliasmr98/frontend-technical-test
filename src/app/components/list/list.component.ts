@@ -7,6 +7,7 @@ import { ApiResponse } from '../../interfaces/api.response';
 import { ErrorMessageComponent } from '../error-message/error-message.component';
 import { HeaderComponent } from '../header/header.component';
 import { PaginationComponent } from '../pagination/pagination.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-list',
@@ -19,6 +20,7 @@ import { PaginationComponent } from '../pagination/pagination.component';
     ErrorMessageComponent,
     HeaderComponent,
     PaginationComponent,
+    FooterComponent,
   ],
 })
 export class ListComponent implements OnInit {

@@ -2,11 +2,12 @@ import { Component, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Character } from '../../interfaces/character';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-edit-character',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, MatButtonModule],
   templateUrl: './edit-character.component.html',
   styleUrl: './edit-character.component.scss',
 })

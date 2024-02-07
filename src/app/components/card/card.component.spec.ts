@@ -26,6 +26,7 @@ describe('CardComponent', () => {
       location: { name: 'Test Location', url: '' },
       status: 'Test Status',
       species: 'Human',
+      image: 'url.sample',
     };
 
     component.characterInfo = characterInfo;
@@ -33,13 +34,13 @@ describe('CardComponent', () => {
 
     const compiled = fixture.nativeElement;
     expect(
-      compiled.querySelector('.character-card p:nth-child(1)').textContent
+      compiled.querySelector('.card-name-container p').textContent
     ).toContain(characterInfo.name);
     expect(
-      compiled.querySelector('.character-card p:nth-child(2)').textContent
+      compiled.querySelector('.card-location-container p').textContent
     ).toContain(characterInfo.location.name);
     expect(
-      compiled.querySelector('.character-card p:nth-child(3)').textContent
+      compiled.querySelector('.card-status-container p').textContent
     ).toContain(characterInfo.status);
   });
 });

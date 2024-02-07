@@ -1,27 +1,39 @@
 <app-header></app-header>
-@if(firstTenCharacters$ | async; as resultObject) {
-<h2>Mi Lista</h2>
-<table class="first-ten-characters-table">
-  <caption>Tabla de los primeros diez caracteres</caption>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Status</th>
-      <th>Species</th>
-    </tr>
-  </thead>
-  <tbody>
-    @for(item of resultObject; track item.id) {
-    <tr>
-      <td>{{ item.name }}</td>
-      <td>{{ item.status }}</td>
-      <td>{{ item.species }}</td>
-      <td><button (click)="openEditForm(item)">Editar</button></td>
-    </tr>
-    }
-  </tbody>
-</table>
-}
+<div class="table-container">
+  <div class="table-title">
+    <h2>First ten characters</h2>
+  </div>
+  @if(firstTenCharacters$ | async; as resultObject) {
+  <div>
+    <table class="first-ten-characters-table">
+      <caption></caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Species</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(item of resultObject; track item.id) {
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.species }}</td>
+          <td><button class="custom-button" (click)="openEditForm(item)">
+              <img
+                src="https://res.cloudinary.com/djz7c5bdp/image/upload/v1707335153/rick-and-morty/by5wcfddvzjcylhyasey.webp"
+                alt="Rick and Morty">
+            </button></td>
+
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+</div>
+<app-footer />
 @if(errorMessage) {
 <app-error-message [errorMessage]="errorMessage" />
 }

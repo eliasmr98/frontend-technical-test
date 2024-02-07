@@ -1,1 +1,10 @@
+@import "../../../vars.scss";
 
+.pagination-container {
+  display: flex;
+  justify-content: space-around;
+  button {
+    cursor: pointer;
+    background-color: $table-blue;
+  }
+}
