@@ -1,1 +1,43 @@
+@import "../../../vars.scss";
 
+.edit-character-dialog-container {
+  max-width: 300px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: $card-grey;
+  font-family: $livvic-font;
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: $livvic-font;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-block-start: 1rem;
+    .save-button {
+      cursor: pointer;
+      background-color: #52790b;
+    }
+    .cancel-button {
+      cursor: pointer;
+      background-color: #c9132a;
+    }
+  }
+}
