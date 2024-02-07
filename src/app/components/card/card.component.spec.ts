@@ -26,6 +26,7 @@ describe('CardComponent', () => {
       location: { name: 'Test Location', url: '' },
       status: 'Test Status',
       species: 'Human',
+      image: 'url.sample',
     };
 
     component.characterInfo = characterInfo;

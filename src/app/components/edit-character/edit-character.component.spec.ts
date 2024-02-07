@@ -46,6 +46,7 @@ describe('EditCharacterComponent', () => {
         name: '',
         url: '',
       },
+      image: 'url.sample',
     };
     component.data = {
       name: 'Updated Name',
@@ -56,6 +57,7 @@ describe('EditCharacterComponent', () => {
         name: '',
         url: '',
       },
+      image: 'url.sample',
     };
     component.updatedCharacter = updatedCharacter;
     component.onSaveClick();
