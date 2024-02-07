@@ -1,21 +1,31 @@
 <header>
   <div class="header-container">
     @if(router.url === '/') {
-    <div>
-      <a routerLink='/table' routerLinkActive="active">
-        <img
-          src="https://res.cloudinary.com/djz7c5bdp/image/upload/h_45/v1707300968/rick-and-morty/traafyi2k7acmmdgbddf.webp"
-          alt="Table icon">
-      </a>
+    <div class="icon-container">
+      <div class="table-icon-container">
+        <a routerLink='/table' routerLinkActive="active">
+          <img
+            src="https://res.cloudinary.com/djz7c5bdp/image/upload/h_45/v1707300968/rick-and-morty/traafyi2k7acmmdgbddf.webp"
+            alt="Table icon">
+        </a>
+      </div>
+      <div class="table-text">
+        <p>Table</p>
+      </div>
     </div>
     }
     @if(router.url === '/table') {
-    <div>
-      <a routerLink="/" routerLinkActive="active">
-        <img
-          src="https://res.cloudinary.com/djz7c5bdp/image/upload/h_45/v1707300975/rick-and-morty/tiyqa1ed3pfi30cr3mmc.webp"
-          alt="Table icon">
-      </a>
+    <div class="icon-container">
+      <div class="home-icon-container">
+        <a routerLink="/" routerLinkActive="active">
+          <img
+            src="https://res.cloudinary.com/djz7c5bdp/image/upload/h_45/v1707300975/rick-and-morty/tiyqa1ed3pfi30cr3mmc.webp"
+            alt="Table icon">
+        </a>
+      </div>
+      <div class="home-text">
+        <p>Home</p>
+      </div>
     </div>
     }
     <div class="logo-container">

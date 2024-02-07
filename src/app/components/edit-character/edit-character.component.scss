@@ -1,30 +1,30 @@
 @import "../../../vars.scss";
 
 .edit-character-dialog-container {
-  max-width: 300px;
-  padding: 20px;
+  max-width: 18.75rem;
+  padding: 1.25rem;
   border: 1px solid white;
   border-radius: 5px;
   background-color: $card-grey;
   font-family: $livvic-font;
   h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     font-family: $livvic-font;
   }
 
   label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
   }
 
   input[type="text"] {
-    width: calc(100% - 20px);
+    width: calc(100% - 1.25rem);
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 0.188rem;
   }
 
   .buttons-container {
