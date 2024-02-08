@@ -1,4 +1,4 @@
-### README del Proyecto Frontend
+### Prueba técnica de Frontend
 
 #### Resumen
 
@@ -39,4 +39,4 @@ Las contribuciones al proyecto son bienvenidas. Si tienes sugerencias de mejoras
 
 ### Contacto
 
-Para cualquier pregunta o comentario, no dudes en ponerte en contacto con el equipo de desarrollo a través de [correo electrónico](eliasmartinrivas@gmail.com).
+Para cualquier pregunta o comentario, no dudes en ponerte en contacto a través de: eliasmartinrivas@gmail.com
