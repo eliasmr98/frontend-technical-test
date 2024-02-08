@@ -1,27 +1,42 @@
-# FrontendTechnicalTest
+### README del Proyecto Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+#### Resumen
 
-## Development server
+Este proyecto consiste en una aplicación frontend desarrollada utilizando TypeScript y Angular 17 en su versión standalone. La aplicación se conecta a la API de Rick y Morty para mostrar una lista de personajes y proporcionar funcionalidades como paginación y edición de personajes. Se emplea SCSS para el diseño de la interfaz, con un enfoque en la responsividad y el rendimiento. La aplicación está completamente testeada con Karma y Jasmine, garantizando la calidad del código. Se sigue el patrón Container Presentational para una mejor organización del código.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### Tecnologías Utilizadas
 
-## Code scaffolding
+- TypeScript
+- Angular 17 (standalone)
+- SCSS
+- Husky
+- SonarCloud
+- Karma y Jasmine
+- Cloudinary
+- Vercel
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Funcionalidades Principales
 
-## Build
+- Visualización de una lista de personajes de la API de Rick y Morty.
+- Paginación para mostrar los personajes de 20 en 20.
+- Edición de personajes con un formulario emergente.
+- Manejo de errores centralizado utilizando interceptores HTTP.
+- Diseño responsive siguiendo el principio de Mobile First.
+- Uso de imágenes optimizadas en Cloudinary para mejorar el rendimiento.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Ejecución del Proyecto
 
-## Running unit tests
+Para ejecutar el proyecto localmente, sigue estos pasos:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clona el repositorio en tu máquina local.
+2. Instala las dependencias del proyecto utilizando el comando `npm install`.
+3. Ejecuta el comando `ng serve` para iniciar el servidor de desarrollo.
+4. Abre tu navegador y navega a `http://localhost:4200` para ver la aplicación en funcionamiento.
 
-## Running end-to-end tests
+### Contribuciones
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Las contribuciones al proyecto son bienvenidas. Si tienes sugerencias de mejoras, por favor crea un issue o envía un pull request.
 
-## Further help
+### Contacto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para cualquier pregunta o comentario, no dudes en ponerte en contacto con el equipo de desarrollo a través de [correo electrónico](eliasmartinrivas@gmail.com).
